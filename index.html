@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nishat Tasnim</title>
+  <meta name="description" content="Nishat Tasnim, Computer Science and Engineering graduate (KUET) and research intern working on vision-language and multimodal generative modeling and trustworthy AI for healthcare.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <!-- 1. Header / About -->
+    <header class="hero">
+      <h1>Nishat Tasnim</h1>
+      <p class="tagline">BSc in Computer Science and Engineering, Khulna University of Engineering &amp; Technology (KUET), Bangladesh</p>
+      <p class="role">Research Intern, Elite Research Lab, Dhaka (Jan 2026 to present): building computer vision models for healthcare data, with a focus on model development, experimental evaluation and technical reporting.</p>
+      <ul class="links" aria-label="Contact and profiles">
+        <li><a href="mailto:nishattasnim.kuet@gmail.com">nishattasnim.kuet@gmail.com</a></li>
+        <li><a href="https://github.com/nishatmahi" rel="me noopener">github.com/nishatmahi</a></li>
+      </ul>
+    </header>
+
+    <section aria-labelledby="interests-h">
+      <h2 id="interests-h">Research interests</h2>
+      <ul class="interests">
+        <li>Vision-Language and Multimodal Generative Modeling</li>
+        <li>Trustworthy and Explainable AI for Healthcare</li>
+        <li>Rationale Faithfulness and Medical Knowledge Grounding</li>
+        <li>Controllable Generation and Parameter-Efficient Adaptation</li>
+      </ul>
+    </section>
+
+    <!-- 2. Publications -->
+    <section aria-labelledby="pubs-h">
+      <h2 id="pubs-h">Publications</h2>
+      <article class="entry">
+        <h3>Advances in Stylized Image Captioning: A Systematic Review of Methods, Benchmarks, Evaluation, and Research Gaps</h3>
+        <p class="meta">Nishat Tasnim, Dipannita Biswas · <span class="venue">IET Computer Vision</span> <span class="tag">accepted</span></p>
+        <p>A systematic review of stylized image captioning from 2016 to 2026: 832 records screened and 49 primary studies included. It traces the field's shift from CNN-LSTM and adversarial models to Transformer, controllable and LLM-based generation, and finds that evaluation remains fragmented, with two small English benchmarks still central. It identifies five open challenges: style versus visual grounding, evaluation standards, moving beyond English and culture, safety/bias/hallucination, and stylized versus controllable captioning.</p>
+      </article>
+    </section>
+
+    <!-- 3. Research: thesis -->
+    <section aria-labelledby="bn-h">
+      <h2 id="bn-h">Research</h2>
+      <article class="entry">
+        <h3>Style Controlled Image Captioning in Bangla</h3>
+        <p class="meta">Undergraduate thesis, KUET · extended into the journal manuscript <em>BnStyleCap</em> (in preparation) · <a href="https://github.com/nishatmahi/Stylenet_Bengali" rel="noopener">code</a></p>
+        <p>The first Bangla model that writes factual, humorous and romantic captions for an image. Because no Bangla stylized caption data existed, humorous and romantic captions were written by an LLM from human factual captions for 35,618 images and checked with caption-level constraints, yielding 17,362 humorous and 17,344 romantic training captions. A multilingual vision-language encoder (NLLB-CLIP) shares one space for Bangla images and text; a prefix mapping network feeds a Bangla GPT-2 decoder, and style tokens switch the mode. Stage 1 learns factual captioning from images, Stage 2 learns style from text alone, and a scaled mean offset bridges the image-text gap at inference.</p>
+
+        <div class="results" aria-label="Results on 1,000 test images">
+          <p class="results-caption">Results of BnStyleCap on 1,000 test images, compared with Qwen2.5-VL 7B prompted zero-shot.</p>
+          <dl>
+            <div class="r"><dt>Style accuracy, romantic</dt><dd><strong>89.0%</strong> vs 82.0%</dd></div>
+            <div class="r"><dt>Style accuracy, humorous</dt><dd><strong>77.9%</strong> vs 78.9% <span class="note">(statistically tied)</span></dd></div>
+            <div class="r"><dt>CLIP-S, humorous</dt><dd><strong>0.485</strong> vs 0.216</dd></div>
+            <div class="r"><dt>CLIP-S, romantic</dt><dd><strong>0.451</strong> vs 0.079</dd></div>
+            <div class="r"><dt>BERTScore vs human refs, humorous</dt><dd><strong>53.28</strong> vs 46.00</dd></div>
+            <div class="r"><dt>BERTScore vs human refs, romantic</dt><dd><strong>53.61</strong> vs 47.42</dd></div>
+          </dl>
+          <p class="factual-line"><span class="label">Factual mode</span> BLEU-1 65.5 · BLEU-3 36.2 · METEOR 34.9 · ROUGE-L 46.2 · CIDEr 62.8</p>
+        </div>
+
+        <div class="cards">
+          <figure class="card">
+            <figcaption>A man surfing a wave</figcaption>
+            <p class="bn"><span class="style-label">Humorous</span> সার্ফবোর্ডে ঢেউ চালানোর কায়দা দেখলে মাধ্যাকর্ষণ শক্তিও অবাক হবে।</p>
+            <p class="bn"><span class="style-label">Romantic</span> সমুদ্রের বিশাল ঢেউয়ের বুকে সার্ফবোর্ডে চড়ে যাওয়া মানুষটির সাহসিকতা দেখে মুগ্ধ হতে হয়।</p>
+          </figure>
+          <figure class="card">
+            <figcaption>A child on a tire swing</figcaption>
+            <p class="bn"><span class="style-label">Humorous</span> ছোট্ট শিশুটি টায়ারের দোলনায় চড়ে বেড়াচ্ছে, তার চোখ কপালে ওঠার জোগাড়।</p>
+            <p class="bn"><span class="style-label">Romantic</span> ছোট শিশুর দোলনায় দোল খাওয়ার এই ছোট্ট মুহূর্তগুলো চিরকাল মনে থাকবে।</p>
+          </figure>
+        </div>
+      </article>
+
+      <!-- 4. Research: Explainable Medical VQA -->
+      <article class="entry">
+        <h3>Explainable Medical Visual Question Answering in Bangla</h3>
+        <p class="meta">In progress</p>
+        <p>Building Bangla versions of rationale-annotated MedVQA benchmarks (R-RAD, R-SLAKE, R-PathVQA) and adapting MedThink (Gai et al., 2024), a lightweight generative MedVQA framework that outputs an answer together with a medical decision-making rationale, to the Bangla language.</p>
+      </article>
+    </section>
+
+    <!-- 5. Projects -->
+    <section aria-labelledby="proj-h">
+      <h2 id="proj-h">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>404 Project Not Found</h3>
+          <p>A full-stack workspace application, organized as a monorepo, that combines a Kanban task board with an image annotation canvas for drawing and saving polygons. The Next.js / React / TypeScript frontend (Konva for annotation, drag-and-drop task columns, JWT auth with automatic token refresh) talks to a Django REST Framework backend that handles authentication, task storage and image uploads.</p>
+          <ul class="badges"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Django REST Framework</li><li>SQLite</li></ul>
+          <p class="proj-links"><a href="https://github.com/nishatmahi/404-project" rel="noopener">GitHub</a> · <a href="https://404-project-git-main-nishatmahis-projects.vercel.app" rel="noopener">Live demo</a></p>
+        </article>
+
+        <article class="project">
+          <h3>pdf-to-markdown</h3>
+          <p>A CPU-based tool that converts PDF files into clean, structured Markdown. It detects headings from font-size metadata, extracts paragraphs, lists and tables, applies bold/italic from font names, and falls back to Tesseract OCR for scanned PDFs, with an optional LLM cleanup step and a browser upload-and-download interface.</p>
+          <ul class="badges"><li>Python</li><li>pdfplumber</li><li>Tesseract OCR</li><li>Gradio</li></ul>
+          <p class="proj-links"><a href="https://github.com/nishatmahi/pdf-to-markdown" rel="noopener">GitHub</a></p>
+        </article>
+
+        <article class="project">
+          <h3>mini-ecommerce-api</h3>
+          <p>A backend system that simulates a basic online shopping platform. It implements JWT authentication with role-based access control (admin and customer), product management, cart operations and order processing, with attention to business logic and data consistency.</p>
+          <ul class="badges"><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>JWT</li></ul>
+          <p class="proj-links"><a href="https://github.com/nishatmahi/mini-ecommerce-api" rel="noopener">GitHub</a></p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Nishat Tasnim.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
